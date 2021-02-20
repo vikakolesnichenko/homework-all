@@ -48,9 +48,28 @@ def shortener(string):
 
 
     """
-    pass
-    #  ...wite your code here
+    l = []
+    s = ''
+    l2 = []
+    t = ''
+    k = ''
+    for string in string:
+        l.append(string.split())
+    m = []
+    for i in l:
+        k = ''
+        for word in i:
+            if len(word) <= 6:
+                m.append(word)
+            elif len(word) > 6:
+                s = ((word[:6]) + '*')
+                m.append(s)
+                k = ' '.join(str(x) for x in m)
+        w = '\n'.join(k)
+    t = ''.join(w)
+    return k
 
+# выводит все в одну строку... 
 
 def compare_ends(words):
     """
