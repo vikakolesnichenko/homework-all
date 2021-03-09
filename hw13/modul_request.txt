@@ -1,0 +1,6 @@
+first request
+
+select concat('We have ',count(*), case when mf = 'm' then ' boys!' else ' girls!' end) from users group by mf;
+
+second request
+select concat('This is ', name, case when mf = 'f' then ' s' else ' ' end, 'he has email ', email) from users;
